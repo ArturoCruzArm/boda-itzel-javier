@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Itzel & Javier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(30px, 30px); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .names {
+            font-size: 1.3em;
+            font-weight: 600;
+            letter-spacing: 8px;
+            margin-top: 20px;
+        }
+
+        .photo-section {
+            padding: 40px 30px;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .couple-photo {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 5px solid white;
+        }
+
+        .story-section {
+            padding: 60px 40px;
+            text-align: center;
+            background: white;
+        }
+
+        .story-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 30px;
+        }
+
+        .story-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        .details-section {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+        }
+
+        .event-card {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .event-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2em;
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .detail-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .map-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .map-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .dress-code {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .dress-code h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 1.2em;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .names {
+                font-size: 1em;
+                letter-spacing: 4px;
+            }
+
+            .story-section, .details-section {
+                padding: 40px 20px;
+            }
+
+            .event-card {
+                padding: 25px;
+            }
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .divider::after {
+            content: '❤';
+            font-size: 2em;
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <h1>Nuestra Boda</h1>
+                <div class="names">ITZEL & JAVIER</div>
+            </div>
+        </div>
+
+        <!-- Photo Section -->
+        <div class="photo-section">
+            <img src="novios.jpg" alt="Itzel y Javier" class="couple-photo">
+        </div>
+
+        <!-- Story Section -->
+        <div class="story-section">
+            <h2>Nuestra Historia</h2>
+            <p class="story-text">
+                Nos conocimos sin imaginar que ese encuentro cambiaría nuestras vidas.
+                Entre risas, pláticas y momentos compartidos, fuimos descubriendo que lo nuestro es algo especial.
+                Hoy, con el corazón lleno de amor y gratitud, queremos dar el paso más importante:
+                unir nuestras vidas ante Dios.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Details Section -->
+        <div class="details-section">
+            <!-- Ceremonia Religiosa -->
+            <div class="event-card">
+                <h3>Ceremonia Religiosa</h3>
+
+                <div class="detail-item">
+                    <div class="detail-label">Fecha</div>
+                    <div class="detail-value">Sábado 13 de Diciembre de 2025</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Hora</div>
+                    <div class="detail-value">3:00 PM</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Lugar</div>
+                    <div class="detail-value">Templo de Nuestra Señora Virgen de Zapopan</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Dirección</div>
+                    <div class="detail-value">Calle Alfères Nº. 410, Real Providencia II</div>
+                    <a href="https://share.google/sUJLmCcMoeJ8mAP89" target="_blank" class="map-button">Ver en Google Maps</a>
+                </div>
+            </div>
+
+            <!-- Recepción -->
+            <div class="event-card">
+                <h3>Recepción</h3>
+
+                <div class="detail-item">
+                    <div class="detail-label">Hora</div>
+                    <div class="detail-value">7:00 PM</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Lugar</div>
+                    <div class="detail-value">Salón los Naranjos II</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Dirección</div>
+                    <div class="detail-value">Calle María Izquierda Nº. 355, Predio San Pablo</div>
+                    <a href="#" target="_blank" class="map-button">Ver en Google Maps</a>
+                </div>
+            </div>
+
+            <!-- Dress Code -->
+            <div class="dress-code">
+                <h4>Código de Vestimenta</h4>
+                <p style="font-size: 1.2em; margin-top: 10px;">
+                    <strong>Formal</strong><br>
+                    Los tonos claros los reservamos para los novios
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Con amor, Itzel & Javier</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.8;">13 de Diciembre, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
