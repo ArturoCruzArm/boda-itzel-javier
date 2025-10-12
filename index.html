@@ -715,18 +715,38 @@
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                attendance: document.getElementById('attendance').value,
-                guests: document.getElementById('guests').value,
-                message: document.getElementById('message').value
-            };
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const attendance = document.getElementById('attendance').value;
+            const guests = document.getElementById('guests').value;
+            const message = document.getElementById('message').value;
 
-            // Para Google Forms, necesitarás reemplazar esta URL con tu formulario
-            // Por ahora, mostramos un mensaje de confirmación
-            alert('¡Gracias por confirmar tu asistencia! Los novios han sido notificados.');
+            // Crear mensaje para WhatsApp
+            const attendanceText = attendance === 'yes' ? 'Sí asistiré' : 'No podré asistir';
+
+            let whatsappMessage = `*Confirmación de Asistencia - Boda Itzel & Javier*\n\n`;
+            whatsappMessage += `👤 *Nombre:* ${name}\n`;
+            whatsappMessage += `📧 *Email:* ${email}\n`;
+            whatsappMessage += `📱 *Teléfono:* ${phone}\n`;
+            whatsappMessage += `✅ *Asistencia:* ${attendanceText}\n`;
+            whatsappMessage += `👥 *Acompañantes:* ${guests}\n`;
+
+            if (message.trim()) {
+                whatsappMessage += `💌 *Mensaje:* ${message}`;
+            }
+
+            // Codificar mensaje para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // Número de WhatsApp (formato internacional sin + ni espacios)
+            const whatsappNumber = '5214771542051';
+
+            // Abrir WhatsApp
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+
+            // Mostrar confirmación y limpiar formulario
+            alert('¡Gracias! Serás redirigido a WhatsApp para enviar tu confirmación.');
             this.reset();
         });
     </script>
