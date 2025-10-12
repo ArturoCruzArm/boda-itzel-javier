@@ -175,6 +175,25 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
+        .map-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .map-container iframe {
+                height: 250px;
+            }
+        }
+
         .dress-code {
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
             padding: 30px;
@@ -285,7 +304,9 @@
                 <div class="detail-item">
                     <div class="detail-label">Dirección</div>
                     <div class="detail-value">Calle Alfères Nº. 410, Real Providencia II</div>
-                    <a href="https://share.google/sUJLmCcMoeJ8mAP89" target="_blank" class="map-button">Ver en Google Maps</a>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.376763789688!2d-101.6540792!3d21.1373994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbee6bcfdb407%3A0x2452f266008cd5de!2sTemplo%20de%20Nuestra%20Se%C3%B1ora%20Virgen%20de%20Zapopan!5e0!3m2!1ses-419!2smx!4v1760304713043!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -306,7 +327,9 @@
                 <div class="detail-item">
                     <div class="detail-label">Dirección</div>
                     <div class="detail-value">Calle María Izquierda Nº. 355, Predio San Pablo</div>
-                    <a href="#" target="_blank" class="map-button">Ver en Google Maps</a>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.6184600322076!2d-101.6485308238801!3d21.167576980516746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bb9333e62ccc5%3A0x2ee7dcfc0617a985!2sC.%20Mar%C3%ADa%20Izquierdo%20355%2C%20col%20predio%2C%20San%20Pablo%2C%2037210%20Le%C3%B3n%20de%20los%20Aldama%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1760304758184!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
 
