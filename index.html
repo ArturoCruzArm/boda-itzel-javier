@@ -627,7 +627,7 @@
 
     <!-- Background Music -->
     <audio id="backgroundMusic" loop>
-        <source src="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/YOUR_REPO@main/mi-bendicion.mp3" type="audio/mpeg">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -663,16 +663,51 @@
         const music = document.getElementById('backgroundMusic');
         const musicControl = document.getElementById('musicControl');
         let isPlaying = false;
+        let userInteracted = false;
 
-        musicControl.addEventListener('click', function() {
+        // Función para intentar reproducir música
+        function tryPlayMusic() {
+            if (!userInteracted) {
+                music.play().then(() => {
+                    isPlaying = true;
+                    musicControl.textContent = '⏸️';
+                    userInteracted = true;
+                }).catch(() => {
+                    // Si falla por política de autoplay, esperar interacción del usuario
+                    console.log('Esperando interacción del usuario para reproducir música');
+                });
+            }
+        }
+
+        // Intentar reproducir al hacer clic en cualquier parte de la página (primer clic)
+        document.addEventListener('click', function() {
+            if (!userInteracted) {
+                tryPlayMusic();
+            }
+        }, { once: true });
+
+        // Intentar reproducir al hacer scroll (primera interacción)
+        document.addEventListener('scroll', function() {
+            if (!userInteracted) {
+                tryPlayMusic();
+            }
+        }, { once: true });
+
+        // Control manual de música
+        musicControl.addEventListener('click', function(e) {
+            e.stopPropagation();
             if (isPlaying) {
                 music.pause();
                 musicControl.textContent = '🎵';
                 isPlaying = false;
             } else {
-                music.play();
-                musicControl.textContent = '⏸️';
-                isPlaying = true;
+                music.play().then(() => {
+                    musicControl.textContent = '⏸️';
+                    isPlaying = true;
+                    userInteracted = true;
+                }).catch(err => {
+                    console.error('Error al reproducir música:', err);
+                });
             }
         });
 
