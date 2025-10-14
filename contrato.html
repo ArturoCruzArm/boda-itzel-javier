@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato - Boda Itzel & Javier | Foro 7</title>
+    <meta name="description" content="Contrato de servicios fotográficos y videográficos - Boda de Itzel y Javier">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .print-header {
+            background-color: #1f2937;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .print-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .print-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .print-info {
+            color: white;
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .contract-container {
+            max-width: 1024px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+        }
+
+        .contract-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contract-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .contract-subtitle {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+        }
+
+        .section-content {
+            margin-left: 1.5rem;
+        }
+
+        .section-content p {
+            margin-bottom: 0.5rem;
+        }
+
+        .section-content ul, .section-content ol {
+            margin-left: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-content li {
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #d1d5db;
+            margin: 1.5rem 0;
+        }
+
+        .signatures {
+            margin-top: 4rem;
+        }
+
+        .signature-section {
+            margin-bottom: 3rem;
+        }
+
+        .signature-title {
+            font-weight: 600;
+            margin-bottom: 3rem;
+        }
+
+        .signature-line {
+            border-top: 2px solid #000;
+            padding-top: 0.5rem;
+            width: 20rem;
+        }
+
+        .signature-dual {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .signature-dual .signature-line {
+            flex: 1;
+        }
+
+        .signature-name {
+            font-weight: 500;
+        }
+
+        .signature-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .package-details {
+            background-color: #f9fafb;
+            padding: 1rem;
+            border-left: 4px solid #2563eb;
+            margin: 1rem 0;
+        }
+
+        .price-breakdown {
+            background-color: #eff6ff;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin: 1rem 0;
+        }
+
+        /* Print styles */
+        @media print {
+            .print-header {
+                display: none !important;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .contract-container {
+                padding: 2rem;
+                box-shadow: none;
+            }
+
+            @page {
+                margin: 2cm;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+
+            .signatures {
+                page-break-before: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contract-container {
+                padding: 1.5rem;
+            }
+
+            .contract-title {
+                font-size: 2rem;
+            }
+
+            .signature-dual {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        <button class="print-button" onclick="window.print()">
+            Descargar como PDF
+        </button>
+        <p class="print-info">
+            Haz clic y selecciona Guardar como PDF
+        </p>
+    </div>
+
+    <div class="contract-container">
+        <div class="contract-header">
+            <h1 class="contract-title">FORO 7</h1>
+            <h2 class="contract-subtitle">CONTRATO DE SERVICIOS FOTOGRÁFICOS Y VIDEOGRÁFICOS</h2>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">DATOS DE LAS PARTES</h3>
+            <div class="section-content">
+                <p><span class="highlight">PRESTADOR DE SERVICIOS:</span></p>
+                <p style="margin-left: 1.5rem; margin-bottom: 0.75rem;">Foro 7 - Arturo Cruz</p>
+                <p><span class="highlight">CONTRATANTES:</span></p>
+                <p style="margin-left: 1.5rem;">Javier Meza e Itzel</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section">
+            <h3 class="section-title">I. OBJETO DEL CONTRATO</h3>
+            <div class="section-content">
+                <p class="text-justify">
+                    El PRESTADOR se compromete a proporcionar los servicios de fotografía y videografía profesional para la boda de los CONTRATANTES, conforme al siguiente detalle:
+                </p>
+
+                <div class="package-details">
+                    <p class="highlight">PAQUETE CONTRATADO: PAQUETE 2 ($6,000) + DRON ($500) + INVITACIONES DIGITALES ($500)</p>
+                </div>
+
+                <p class="highlight" style="margin-top: 1rem; margin-bottom: 0.5rem;">El Paquete 2 incluye:</p>
+                <ul>
+                    <li>Cobertura completa: Sesión previa, misa y fiesta</li>
+                    <li>100 fotografías del evento impresas en tamaño 5x7 pulgadas</li>
+                    <li>1 película en USB formato 4K con duración de 3 horas, editada, musicalizada y titulada</li>
+                    <li>1 videoclip para proyectar en el salón de la sesión previa y fotos del recuerdo</li>
+                    <li>1 caja impresa para la USB</li>
+                    <li>1 foto ampliada a tamaño 40x50 cm con marco</li>
+                    <li>1 caja impresa para las fotografías</li>
+                    <li>1 sesión de fotografías antes del evento o el día del evento</li>
+                </ul>
+
+                <p class="highlight" style="margin-bottom: 0.5rem;">Servicios adicionales contratados:</p>
+                <ul>
+                    <li>Video grabado con dron ($500)</li>
+                    <li>Invitación digital personalizada ($500) - Ya entregada</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section">
+            <h3 class="section-title">II. DATOS DEL EVENTO</h3>
+            <div class="section-content">
+                <p><span class="highlight">Tipo de evento:</span> Boda religiosa</p>
+                <p><span class="highlight">Novios:</span> Itzel y Javier</p>
+                <p><span class="highlight">Fecha del evento:</span> Sábado 13 de diciembre de 2025</p>
+                <p><span class="highlight">Hora:</span> 3:00 PM</p>
+                <p><span class="highlight">Lugar:</span> Templo de Nuestra Señora Virgen de Zapopan</p>
+                <p><span class="highlight">Dirección:</span> Calle Alferes No. 410, Real Providencia II</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section">
+            <h3 class="section-title">III. CONDICIONES ECONÓMICAS</h3>
+            <div class="section-content">
+                <p class="highlight" style="margin-bottom: 0.5rem;">Desglose del servicio:</p>
+                <div class="price-breakdown">
+                    <p>Paquete 2: $6,000.00 MXN</p>
+                    <p>Servicio de dron: $500.00 MXN</p>
+                    <p>Invitaciones digitales: $500.00 MXN</p>
+                </div>
+
+                <p><span class="highlight">Monto total del servicio:</span> $7,000.00 MXN (Siete mil pesos 00/100 M.N.)</p>
+                <p><span class="highlight">Apartado entregado:</span> $500.00 MXN (Quinientos pesos 00/100 M.N.)</p>
+                <p><span class="highlight">Fecha de entrega del apartado:</span> 10 de octubre de 2025</p>
+                <p><span class="highlight">Saldo pendiente:</span> $6,500.00 MXN (Seis mil quinientos pesos 00/100 M.N.)</p>
+                <p style="margin-top: 0.5rem;"><span class="highlight">Fecha límite de liquidación:</span> 5 de diciembre de 2025</p>
+                <p style="font-style: italic; font-size: 0.875rem;">(8 días antes del evento)</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section">
+            <h3 class="section-title">IV. FORMA DE ENTREGA</h3>
+            <div class="section-content">
+                <p class="highlight" style="margin-bottom: 0.5rem;">Entrega Digital:</p>
+                <ul style="margin-bottom: 0.75rem;">
+                    <li>La invitación digital ha sido entregada y está disponible</li>
+                    <li>Todo el material fotográfico y videográfico en formato digital será entregado posterior al evento</li>
+                </ul>
+
+                <p class="highlight" style="margin-bottom: 0.5rem;">Entrega Física:</p>
+                <ul>
+                    <li>Una vez concluido el evento, los CONTRATANTES seleccionarán las fotografías que deseen imprimir</li>
+                    <li>Los CONTRATANTES confirmarán que el video es de su conformidad</li>
+                    <li>El material físico será entregado una vez completada la selección y aprobación</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section">
+            <h3 class="section-title">V. OBLIGACIONES DEL PRESTADOR</h3>
+            <div class="section-content">
+                <ol>
+                    <li>Realizar la cobertura fotográfica y videográfica profesional del evento</li>
+                    <li>Utilizar equipo de dron para tomas aéreas</li>
+                    <li>Entregar invitación digital personalizada (completada)</li>
+                    <li>Realizar edición profesional del material fotográfico y videográfico</li>
+                    <li>Entregar todos los productos físicos especificados en el Paquete 2</li>
+                    <li>Entregar el material digital completo</li>
+                    <li>Cumplir con todos los entregables detallados en el contrato</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section">
+            <h3 class="section-title">VI. OBLIGACIONES DE LOS CONTRATANTES</h3>
+            <div class="section-content">
+                <ol>
+                    <li>Liquidar el saldo pendiente de $6,500.00 MXN el 5 de diciembre de 2025</li>
+                    <li>Facilitar el acceso a las locaciones del evento</li>
+                    <li>Seleccionar las fotografías para impresión física</li>
+                    <li>Confirmar la aprobación del video editado</li>
+                    <li>Proporcionar cualquier información adicional necesaria para el servicio</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section">
+            <h3 class="section-title">VII. CLÁUSULAS ADICIONALES</h3>
+            <div class="section-content">
+                <p class="text-justify" style="margin-bottom: 0.5rem;">
+                    <span class="highlight">1. MODIFICACIONES:</span> Cualquier modificación al presente contrato deberá ser acordada por ambas partes por escrito.
+                </p>
+
+                <p class="text-justify" style="margin-bottom: 0.5rem;">
+                    <span class="highlight">2. CANCELACIÓN:</span> En caso de cancelación por parte de los CONTRATANTES, el apartado entregado no será reembolsable.
+                </p>
+
+                <p class="text-justify" style="margin-bottom: 0.5rem;">
+                    <span class="highlight">3. DERECHOS DE AUTOR:</span> El PRESTADOR conserva los derechos de autor del material creado, pero otorga a los CONTRATANTES licencia de uso personal del mismo.
+                </p>
+
+                <p class="text-justify" style="margin-bottom: 0.5rem;">
+                    <span class="highlight">4. CONTINGENCIAS:</span> En caso de enfermedad o emergencia del PRESTADOR, este se compromete a proporcionar un fotógrafo/videógrafo de reemplazo con capacidades similares.
+                </p>
+
+                <p class="text-justify">
+                    <span class="highlight">5. CLIMA:</span> En caso de condiciones climáticas adversas que impidan el uso del dron, se hará lo posible por realizar las tomas aéreas en momentos apropiados durante el evento.
+                </p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section">
+            <h3 class="section-title">VIII. ACEPTACIÓN</h3>
+            <div class="section-content">
+                <p class="text-justify">
+                    Ambas partes manifiestan su conformidad con los términos establecidos en el presente contrato y lo firman en León, Guanajuato, a los 13 días del mes de octubre de 2025.
+                </p>
+            </div>
+        </div>
+
+        <div class="signatures">
+            <div class="signature-section">
+                <p class="signature-title">PRESTADOR DE SERVICIOS</p>
+                <div class="signature-line">
+                    <p class="signature-name">Arturo Cruz</p>
+                    <p class="signature-label">Foro 7</p>
+                </div>
+            </div>
+
+            <div class="signature-section">
+                <p class="signature-title">CONTRATANTES</p>
+                <div class="signature-dual">
+                    <div class="signature-line">
+                        <p class="signature-name">Javier Meza</p>
+                        <p class="signature-label">Firma</p>
+                    </div>
+                    <div class="signature-line">
+                        <p class="signature-name">Itzel</p>
+                        <p class="signature-label">Firma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
