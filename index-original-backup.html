@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Itzel & Javier - 13 de Diciembre 2025</title>
+    <meta name="description" content="Invitación a la boda de Itzel y Javier. Sábado 13 de Diciembre de 2025">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #faf8f5 100%);
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fffef9;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f5f0e8 0%, #fff9f0 50%, #f5f0e8 100%);
+            color: #4a4a4a;
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(30px, 30px); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            color: #4a4a4a;
+        }
+
+        .names {
+            font-size: 1.3em;
+            font-weight: 600;
+            letter-spacing: 8px;
+            margin-top: 20px;
+            color: #4a4a4a;
+        }
+
+        .photo-section {
+            padding: 40px 30px;
+            text-align: center;
+            background: #faf8f3;
+        }
+
+        .couple-photo {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            border: 5px solid #fffef9;
+        }
+
+        .verse-section {
+            padding: 50px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #fffef9 0%, #faf8f3 100%);
+            border-top: 2px solid #e8dcc8;
+            border-bottom: 2px solid #e8dcc8;
+        }
+
+        .verse-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4em;
+            font-style: italic;
+            color: #5a5a5a;
+            max-width: 700px;
+            margin: 0 auto 15px;
+            line-height: 1.8;
+        }
+
+        .verse-reference {
+            font-size: 1.1em;
+            color: #c5a572;
+            font-weight: 600;
+        }
+
+        .story-section {
+            padding: 60px 40px;
+            text-align: center;
+            background: #fffef9;
+        }
+
+        .story-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5em;
+            color: #c5a572;
+            margin-bottom: 30px;
+        }
+
+        .story-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        .countdown-section {
+            padding: 50px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f0e8 0%, #fff9f0 100%);
+        }
+
+        .countdown-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2em;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: #fffef9;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 100px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .countdown-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #c5a572;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .countdown-label {
+            font-size: 0.9em;
+            color: #5a5a5a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .details-section {
+            padding: 60px 40px;
+            background: #faf8f3;
+        }
+
+        .event-card {
+            background: #fffef9;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(197, 165, 114, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid #e8dcc8;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(197, 165, 114, 0.3);
+        }
+
+        .event-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2em;
+            color: #c5a572;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .detail-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #faf8f3;
+            border-left: 4px solid #c5a572;
+            border-radius: 5px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #c5a572;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            font-size: 1.1em;
+            color: #5a5a5a;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+
+        .dress-code {
+            background: linear-gradient(135deg, #fff9f0 0%, #f5f0e8 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .dress-code h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8em;
+            color: #4a4a4a;
+            margin-bottom: 15px;
+        }
+
+        .rsvp-section {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #fffef9 0%, #faf8f3 100%);
+        }
+
+        .rsvp-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5em;
+            color: #c5a572;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .rsvp-intro {
+            text-align: center;
+            font-size: 1.1em;
+            color: #5a5a5a;
+            margin-bottom: 30px;
+        }
+
+        .rsvp-deadline {
+            text-align: center;
+            font-size: 1em;
+            color: #c5a572;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fffef9;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(197, 165, 114, 0.2);
+            border: 1px solid #e8dcc8;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5a5a5a;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e8dcc8;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            background: #fffef9;
+            color: #5a5a5a;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #c5a572;
+            box-shadow: 0 0 10px rgba(197, 165, 114, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: linear-gradient(135deg, #f5f0e8 0%, #fff9f0 100%);
+            color: #4a4a4a;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .submit-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(197, 165, 114, 0.4);
+        }
+
+        .footer {
+            background: #4a4a4a;
+            color: #fffef9;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 1.2em;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #f5f0e8 0%, #fff9f0 100%);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .music-control:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .names {
+                font-size: 1em;
+                letter-spacing: 4px;
+            }
+
+            .story-section, .details-section, .rsvp-section {
+                padding: 40px 20px;
+            }
+
+            .event-card, .rsvp-form {
+                padding: 25px;
+            }
+
+            .countdown {
+                gap: 10px;
+            }
+
+            .countdown-item {
+                min-width: 80px;
+                padding: 15px;
+            }
+
+            .countdown-number {
+                font-size: 2em;
+            }
+
+            .map-container iframe {
+                height: 250px;
+            }
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .divider::after {
+            content: '❤';
+            font-size: 2em;
+            color: #c5a572;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <h1>Nuestra Boda</h1>
+                <div class="names">ITZEL & JAVIER</div>
+            </div>
+        </div>
+
+        <!-- Photo Section -->
+        <div class="photo-section">
+            <img src="novios.png" alt="Itzel y Javier" class="couple-photo">
+        </div>
+
+        <!-- Verse Section -->
+        <div class="verse-section">
+            <p class="verse-text">
+                "Si nos amamos los unos a los otros, Dios permanece en nosotros,
+                y su amor ha llegado a su plenitud en nosotros"
+            </p>
+            <p class="verse-reference">- 1 Juan 4:12</p>
+        </div>
+
+        <!-- Story Section -->
+        <div class="story-section">
+            <h2>Nuestra Historia</h2>
+            <p class="story-text">
+                Nos conocimos sin imaginar que ese encuentro cambiaría nuestras vidas.
+                Entre risas, pláticas y momentos compartidos, fuimos descubriendo que lo nuestro es algo especial.
+                Hoy, con el corazón lleno de amor y gratitud, queremos dar el paso más importante:
+                unir nuestras vidas ante Dios.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Countdown Section -->
+        <div class="countdown-section">
+            <h2>Cuenta Regresiva</h2>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details Section -->
+        <div class="details-section">
+            <!-- Ceremonia Religiosa -->
+            <div class="event-card">
+                <h3>Ceremonia Religiosa</h3>
+
+                <div class="detail-item">
+                    <div class="detail-label">Fecha</div>
+                    <div class="detail-value">Sábado 13 de Diciembre de 2025</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Hora</div>
+                    <div class="detail-value">3:00 PM</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Lugar</div>
+                    <div class="detail-value">Templo de Nuestra Señora Virgen de Zapopan</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Dirección</div>
+                    <div class="detail-value">Calle Alfères Nº. 410, Real Providencia II</div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.376763789688!2d-101.6540792!3d21.1373994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbee6bcfdb407%3A0x2452f266008cd5de!2sTemplo%20de%20Nuestra%20Se%C3%B1ora%20Virgen%20de%20Zapopan!5e0!3m2!1ses-419!2smx!4v1760304713043!5m2!1ses-419!2smx"
+                            title="Mapa de ubicación del Templo de Nuestra Señora Virgen de Zapopan"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recepción -->
+            <div class="event-card">
+                <h3>Recepción</h3>
+
+                <div class="detail-item">
+                    <div class="detail-label">Hora</div>
+                    <div class="detail-value">7:00 PM</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Lugar</div>
+                    <div class="detail-value">Salón los Naranjos II</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Dirección</div>
+                    <div class="detail-value">Calle María Izquierda Nº. 355, Predio San Pablo</div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.6184600322076!2d-101.6485308238801!3d21.167576980516746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bb9333e62ccc5%3A0x2ee7dcfc0617a985!2sC.%20Mar%C3%ADa%20Izquierdo%20355%2C%20col%20predio%2C%20San%20Pablo%2C%2037210%20Le%C3%B3n%20de%20los%20Aldama%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1760304758184!5m2!1ses-419!2smx"
+                            title="Mapa de ubicación del Salón los Naranjos II"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dress Code -->
+            <div class="dress-code">
+                <h4>Código de Vestimenta</h4>
+                <p style="font-size: 1.2em; margin-top: 10px;">
+                    <strong>Formal</strong><br>
+                    Los tonos claros los reservamos para los novios
+                </p>
+            </div>
+        </div>
+
+        <!-- RSVP Section -->
+        <div class="rsvp-section">
+            <h2>Confirmación de Asistencia</h2>
+            <p class="rsvp-intro">
+                Tu presencia es muy importante para nosotros. Por favor, confirma tu asistencia.
+            </p>
+            <p class="rsvp-deadline">
+                Fecha límite: 31 de Octubre de 2025
+            </p>
+
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <label for="name">Nombre Completo *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Teléfono *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="attendance">¿Asistirás? *</label>
+                    <select id="attendance" name="attendance" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="yes">Sí, asistiré</option>
+                        <option value="no">No podré asistir</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje para los novios (opcional)</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Confirmar Asistencia</button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Con amor, Itzel & Javier</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.8;">13 de Diciembre, 2025</p>
+        </div>
+    </div>
+
+    <!-- Music Control -->
+    <button class="music-control" id="musicControl" title="Reproducir/Pausar música">🎵</button>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="Juan Luis Guerra - Mi Bendicion.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Countdown Timer
+        const weddingDate = new Date('2025-12-13T14:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+
+            if (distance < 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Music Control
+        const music = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        let isPlaying = false;
+        let userInteracted = false;
+
+        // Función para intentar reproducir música
+        function tryPlayMusic() {
+            if (!userInteracted) {
+                music.play().then(() => {
+                    isPlaying = true;
+                    musicControl.textContent = '⏸️';
+                    userInteracted = true;
+                }).catch(() => {
+                    // Si falla por política de autoplay, esperar interacción del usuario
+                    console.log('Esperando interacción del usuario para reproducir música');
+                });
+            }
+        }
+
+        // Intentar reproducir al hacer clic en cualquier parte de la página (primer clic)
+        document.addEventListener('click', function() {
+            if (!userInteracted) {
+                tryPlayMusic();
+            }
+        }, { once: true });
+
+        // Intentar reproducir al hacer scroll (primera interacción)
+        document.addEventListener('scroll', function() {
+            if (!userInteracted) {
+                tryPlayMusic();
+            }
+        }, { once: true });
+
+        // Control manual de música
+        musicControl.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isPlaying) {
+                music.pause();
+                musicControl.textContent = '🎵';
+                isPlaying = false;
+            } else {
+                music.play().then(() => {
+                    musicControl.textContent = '⏸️';
+                    isPlaying = true;
+                    userInteracted = true;
+                }).catch(err => {
+                    console.error('Error al reproducir música:', err);
+                });
+            }
+        });
+
+        // RSVP Form
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const attendance = document.getElementById('attendance').value;
+            const message = document.getElementById('message').value;
+
+            // Crear mensaje para WhatsApp
+            const attendanceText = attendance === 'yes' ? 'Sí asistiré' : 'No podré asistir';
+
+            let whatsappMessage = `*Confirmación de Asistencia - Boda Itzel & Javier*\n\n`;
+            whatsappMessage += `👤 *Nombre:* ${name}\n`;
+            whatsappMessage += `📧 *Email:* ${email}\n`;
+            whatsappMessage += `📱 *Teléfono:* ${phone}\n`;
+            whatsappMessage += `✅ *Asistencia:* ${attendanceText}\n`;
+
+            if (message.trim()) {
+                whatsappMessage += `💌 *Mensaje:* ${message}`;
+            }
+
+            // Codificar mensaje para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // Número de WhatsApp (formato internacional sin + ni espacios)
+            const whatsappNumber = '5214771542051';
+
+            // Abrir WhatsApp
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+
+            // Mostrar confirmación y limpiar formulario
+            alert('¡Gracias! Serás redirigido a WhatsApp para enviar tu confirmación.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
