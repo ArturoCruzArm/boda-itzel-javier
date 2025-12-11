@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logística del Evento - Boda Itzel & Javier | Foro 7</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💒</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e91e63 0%, #f06292 50%, #f48fb1 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .logistics-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #e91e63 0%, #f06292 50%, #f48fb1 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            background: white;
+            color: #e91e63;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links a.active {
+            background: #c2185b;
+            color: white;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #e91e63, #f48fb1);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 100px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 38px;
+            top: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #e91e63;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #e91e63;
+        }
+
+        .time-badge {
+            display: inline-block;
+            background: #e91e63;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #e91e63;
+        }
+
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .timeline-content p {
+            color: #666;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .timeline-content ul {
+            margin-top: 10px;
+            margin-left: 20px;
+            color: #666;
+        }
+
+        .timeline-content li {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        .location-card {
+            background: white;
+            border: 2px solid #e91e63;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .location-card h4 {
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+
+        .location-card a {
+            display: inline-block;
+            background: #e91e63;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .location-card a:hover {
+            background: #c2185b;
+            transform: translateX(5px);
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .section h2 {
+            color: #e91e63;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f48fb1;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e91e63 0%, #f48fb1 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-box h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .contact-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+            border: 2px solid #e91e63;
+        }
+
+        .contact-section h3 {
+            color: #e91e63;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .contact-info {
+            font-size: 1.2em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .important-note h4 {
+            color: #856404;
+            margin-bottom: 8px;
+        }
+
+        .important-note p {
+            color: #856404;
+            margin: 5px 0;
+        }
+
+        .equipment-section {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+
+        .equipment-section h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+
+        .equipment-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .equipment-section li {
+            padding: 8px 0;
+            color: #1565c0;
+            font-weight: 500;
+        }
+
+        .equipment-section li:before {
+            content: "📷 ";
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .timeline-item {
+                padding-left: 80px;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item::before {
+                left: 18px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .footer p {
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .footer .company-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="logistics-container">
+        <div class="header">
+            <h1>💒 Logística del Evento</h1>
+            <p>Boda de Itzel y Javier</p>
+            <p style="font-size: 1em; margin-top: 10px;">Sábado 13 de diciembre de 2025</p>
+
+            <div class="nav-links">
+                <a href="index.html">Invitación</a>
+                <a href="contrato.html">Contrato</a>
+                <a href="logistica.html" class="active">Logística</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="section">
+                <h2>📍 Información General del Evento</h2>
+
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>📅 Fecha</h3>
+                        <p>Sábado</p>
+                        <p>13 Diciembre 2025</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>⛪ Ceremonia</h3>
+                        <p>2:00 PM</p>
+                        <p style="font-size: 0.9em;">Misa</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>🎉 Recepción</h3>
+                        <p>7:00 PM</p>
+                        <p style="font-size: 0.9em;">Fiesta</p>
+                    </div>
+                </div>
+
+                <div class="important-note">
+                    <h4>⚠️ Importante para los Novios</h4>
+                    <p><strong>• Horario de llegada del fotógrafo:</strong> Por confirmar según logística final</p>
+                    <p><strong>• Batería y equipo:</strong> Todo el equipo estará cargado y listo antes del evento</p>
+                    <p><strong>• Respaldo:</strong> Se realizarán respaldos continuos durante todo el evento</p>
+                    <p><strong>• Coordinación:</strong> Mantener comunicación constante vía WhatsApp</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⏰ Cronograma del Día</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time-badge">Por confirmar</span>
+                        <div class="timeline-content">
+                            <h3>🏠 Preparativos en Casa de la Novia</h3>
+                            <p><strong>Actividades a capturar:</strong></p>
+                            <ul>
+                                <li>Arreglo de la novia</li>
+                                <li>Detalles del vestido y accesorios</li>
+                                <li>Momentos con familia</li>
+                                <li>Preparación del novio (si aplica)</li>
+                            </ul>
+                            <div class="location-card">
+                                <h4>📍 Ubicación</h4>
+                                <p>Calle Arcelia 358, Colonia Lomas de Medina</p>
+                                <p style="font-size: 0.9em; color: #666; margin-top: 5px;">Casa portón blanco</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Calle+Arcelia+358+Lomas+de+Medina+León+Guanajuato" target="_blank">📍 Ver en Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-badge">2:00 PM</span>
+                        <div class="timeline-content">
+                            <h3>⛪ Ceremonia Religiosa (Misa)</h3>
+                            <p><strong>Cobertura incluye:</strong></p>
+                            <ul>
+                                <li>Llegada de invitados</li>
+                                <li>Entrada de padrinos y familiares</li>
+                                <li>Entrada de la novia</li>
+                                <li>Ceremonia completa</li>
+                                <li>Intercambio de votos y anillos</li>
+                                <li>Salida de los novios</li>
+                                <li>Fotos con familia e invitados</li>
+                            </ul>
+                            <div class="location-card">
+                                <h4>📍 Ubicación</h4>
+                                <p>Templo de Nuestra Señora Virgen de Zapopan</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Templo+Nuestra+Señora+Virgen+de+Zapopan+León+Guanajuato" target="_blank">📍 Ver en Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-badge">7:00 PM</span>
+                        <div class="timeline-content">
+                            <h3>🎉 Recepción y Fiesta</h3>
+                            <p><strong>Momentos a capturar:</strong></p>
+                            <ul>
+                                <li>Recepción de invitados</li>
+                                <li>Entrada de los novios</li>
+                                <li>Primer baile</li>
+                                <li>Vals</li>
+                                <li>Brindis</li>
+                                <li>Corte de pastel</li>
+                                <li>Lanzamiento de ramo</li>
+                                <li>Baile y fiesta</li>
+                                <li>Momentos especiales y candid shots</li>
+                            </ul>
+                            <div class="location-card">
+                                <h4>📍 Ubicación</h4>
+                                <p>Calle María Izquierdo 355, Predio San Pablo</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Calle+María+Izquierdo+355+Predio+San+Pablo+León+Guanajuato" target="_blank">📍 Ver en Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📸 Equipo y Procedimientos</h2>
+
+                <div class="equipment-section">
+                    <h3>Cámara de Fotografía</h3>
+                    <ul>
+                        <li>Cámara profesional con lentes de alta calidad</li>
+                        <li>Flash externo para interiores</li>
+                        <li>Baterías de respaldo completamente cargadas</li>
+                        <li>Tarjetas de memoria con amplio almacenamiento</li>
+                        <li>Respaldo inmediato de todas las fotos</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #1565c0;"><strong>Entrega:</strong> 100 fotografías impresas en tamaño 5x7" + todas las fotos digitales</p>
+                </div>
+
+                <div class="equipment-section">
+                    <h3>Cámara de Video</h3>
+                    <ul>
+                        <li>Videocámara 4K profesional</li>
+                        <li>Micrófono direccional para audio claro</li>
+                        <li>Estabilizador para tomas suaves</li>
+                        <li>Iluminación portátil LED</li>
+                        <li>Baterías adicionales y respaldos</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #1565c0;"><strong>Entrega:</strong> Película de 3 horas en formato 4K, editada, musicalizada y titulada + videoclip para proyección</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📋 Indicaciones para los Novios</h2>
+
+                <div class="timeline-content">
+                    <h3>Antes del Evento</h3>
+                    <ul>
+                        <li><strong>Confirmar horarios:</strong> Avisar con anticipación cualquier cambio de horario</li>
+                        <li><strong>Lista de fotos importantes:</strong> Enviar lista de fotos específicas que deseen (familia, grupos especiales)</li>
+                        <li><strong>Acceso a locaciones:</strong> Asegurar que el fotógrafo tenga acceso libre a todas las áreas</li>
+                        <li><strong>Contacto:</strong> Designar a una persona de contacto para el día del evento</li>
+                        <li><strong>Timeline:</strong> Compartir el timeline completo del evento si hay cambios</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-content" style="margin-top: 20px;">
+                    <h3>Durante el Evento</h3>
+                    <ul>
+                        <li><strong>Naturalidad:</strong> Actúen con naturalidad, captaremos los momentos especiales</li>
+                        <li><strong>Poses familiares:</strong> Avisar cuándo están listos para fotos familiares</li>
+                        <li><strong>Momentos especiales:</strong> Informar sobre cualquier sorpresa o momento especial planificado</li>
+                        <li><strong>Paciencia:</strong> Las mejores fotos toman tiempo, confíen en el proceso</li>
+                        <li><strong>Comunicación:</strong> Cualquier solicitud especial, comunicarla en el momento</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-content" style="margin-top: 20px;">
+                    <h3>Después del Evento</h3>
+                    <ul>
+                        <li><strong>Revisión de fotos:</strong> Se les enviará una galería digital para seleccionar las 100 fotos a imprimir</li>
+                        <li><strong>Aprobación del video:</strong> Revisarán el video editado antes de la entrega final</li>
+                        <li><strong>Tiempo de entrega:</strong> Material digital: 2-3 semanas / Material físico: 4-6 semanas después de la selección</li>
+                        <li><strong>Formato de entrega:</strong> USB en caja personalizada + fotos impresas en caja + ampliación con marco</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="contact-section">
+                <h3>📱 Contacto - Foro 7</h3>
+                <p class="contact-info">
+                    WhatsApp: <a href="https://wa.me/5214779203776">477-920-3776</a>
+                </p>
+                <p class="contact-info">
+                    Arturo Cruz
+                </p>
+                <p style="margin-top: 15px; color: #666; font-size: 0.95em;">
+                    Disponible 24/7 para cualquier consulta o cambio
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="company-name">Producciones Foro 7</p>
+            <p>Fotografía, Video, Dron e Invitaciones Web</p>
+            <p>📱 Contacto: 477-920-3776</p>
+        </div>
+    </div>
+</body>
+</html>
