@@ -76,3 +76,59 @@ Si necesitas hacer cambios:
 
 - El enlace al mapa de la recepción está incompleto en los datos originales. Por favor actualízalo en el HTML.
 - Los colores principales son morado/azul, pero puedes cambiarlos editando los valores en la sección `<style>`
+
+---
+
+## Selector de Fotos
+
+Este repositorio también incluye un **sistema de selector de fotos** interactivo para organizar las fotos del evento.
+
+### Características del Selector
+
+- Interfaz web interactiva para clasificar fotos
+- Categorías: Ampliación, Impresión, Invitación, Descartadas
+- Guardado automático en el navegador
+- Filtros por categoría
+- Exportación en JSON
+- Navegación con teclado
+
+### Configuración Inicial
+
+**IMPORTANTE**: Las fotos no están incluidas en el repositorio (son demasiado pesadas para GitHub).
+
+Para usar el selector localmente:
+
+1. **Coloca tus fotos**: Pon las fotos originales en un directorio (ej: `F:\fotos-boda\`)
+
+2. **Edita la ruta**: Abre `convertir_a_webp.py` y actualiza la variable `SOURCE_DIR` con tu ruta:
+   ```python
+   SOURCE_DIR = r"TU_RUTA_AQUI"
+   ```
+
+3. **Convierte las fotos**: Ejecuta el script para convertir a WebP optimizado:
+   ```bash
+   python convertir_a_webp.py
+   ```
+
+4. **Genera la lista**: Actualiza el selector con las fotos:
+   ```bash
+   python generar_lista_fotos.py
+   ```
+
+5. **Abre el selector**: Abre `selector.html` en tu navegador
+
+### Uso del Selector
+
+Lee la documentación completa en [SELECTOR_FOTOS_README.md](SELECTOR_FOTOS_README.md)
+
+### Archivos del Selector
+
+```
+├── selector.html              # Interfaz del selector
+├── convertir_a_webp.py        # Convierte fotos a WebP
+├── generar_lista_fotos.py     # Genera lista de fotos
+├── SELECTOR_FOTOS_README.md   # Documentación detallada
+├── css/selector.css           # Estilos
+├── js/selector.js             # Lógica
+└── images/                    # Fotos (no incluidas en git)
+```
