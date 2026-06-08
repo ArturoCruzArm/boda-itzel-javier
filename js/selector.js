@@ -546,6 +546,11 @@ const photos = [
     'images/DSC_1063.webp',
     'images/DSC_1064.webp'
 ];
+// Thumbnail helper: usa thumb/ en grid para ahorrar RAM en moviles
+function getThumbPath(fullPath) {
+    return fullPath.replace('images/', 'images/thumb/');
+}
+
 
 const STORAGE_KEY = 'boda_juan_manuel_luz_mariana_photo_selections';
 let photoSelections = {};
@@ -706,7 +711,7 @@ function renderGallery() {
         } else {
             mediaHTML = `
                 <div class="photo-image-container">
-                    <img src="${photo}" alt="${displayNumber}" loading="lazy">
+                    <img src="${getThumbPath(photo)}" alt="${displayNumber}" loading="lazy">
                 </div>
             `;
         }
